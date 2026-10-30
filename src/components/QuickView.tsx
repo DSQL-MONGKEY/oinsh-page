@@ -28,8 +28,12 @@ export default function QuickView({ product, onClose }: Props) {
 
   if (!product) return null
 
+  const isOneSize =
+    product.sizes.length === 1 &&
+    product.sizes[0].toLowerCase() === 'one size'
   const activeSize = size || product.sizes[0] || ''
-  const message = `Halo ${brand.name}, saya ingin memesan ${product.name} (${product.color})${activeSize ? ` ukuran ${activeSize}` : ''}.`
+  const sizeDetail = !isOneSize && activeSize ? ` ukuran ${activeSize}` : ''
+  const message = `Halo ${brand.name}, saya ingin memesan ${product.name} (${product.color})${sizeDetail}.`
   const orderUrl = `https://wa.me/${brand.contact.whatsapp}?text=${encodeURIComponent(message)}`
 
   return (
@@ -55,7 +59,15 @@ export default function QuickView({ product, onClose }: Props) {
         </button>
 
         <div className="quick-view-media">
-          <img src={product.image} alt={product.imageAlt} />
+          <img
+            src={product.image}
+            alt={product.imageAlt}
+            style={
+              product.imagePosition
+                ? { objectPosition: product.imagePosition }
+                : undefined
+            }
+          />
         </div>
 
         <div className="quick-view-body">
@@ -68,26 +80,28 @@ export default function QuickView({ product, onClose }: Props) {
           <p className="quick-view-price">{formatPrice(product.price)}</p>
           <p className="quick-view-description">{product.description}</p>
 
-          <fieldset className="size-picker">
-            <legend>{brand.quickView.sizeLabel}</legend>
-            <div className="size-options">
-              {product.sizes.map((option) => (
-                <label
-                  key={option}
-                  className={`size-option${activeSize === option ? ' is-active' : ''}`}
-                >
-                  <input
-                    type="radio"
-                    name="product-size"
-                    value={option}
-                    checked={activeSize === option}
-                    onChange={() => setSize(option)}
-                  />
-                  <span>{option}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
+          {!isOneSize && (
+            <fieldset className="size-picker">
+              <legend>{brand.quickView.sizeLabel}</legend>
+              <div className="size-options">
+                {product.sizes.map((option) => (
+                  <label
+                    key={option}
+                    className={`size-option${activeSize === option ? ' is-active' : ''}`}
+                  >
+                    <input
+                      type="radio"
+                      name="product-size"
+                      value={option}
+                      checked={activeSize === option}
+                      onChange={() => setSize(option)}
+                    />
+                    <span>{option}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          )}
 
           <div className="quick-view-details">
             <p className="detail-label">{brand.quickView.detailsLabel}</p>

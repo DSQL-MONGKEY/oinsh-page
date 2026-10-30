@@ -1,5 +1,6 @@
 import { useEffect, type CSSProperties } from 'react'
 import { brand } from './brand'
+import Accessories from './components/Accessories'
 import BlueEdit from './components/BlueEdit'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -50,6 +51,7 @@ export default function App() {
         <Hero />
         <Marquee />
         <Products />
+        <Accessories />
         <BlueEdit />
         <Story />
         <Values />

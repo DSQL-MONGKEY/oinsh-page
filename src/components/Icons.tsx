@@ -42,6 +42,20 @@ export function ArrowRight({ size = 16, className }: IconProps) {
   )
 }
 
+export function ArrowLeft({ size = 16, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className} fill="none">
+      <path
+        d="M20 12H4m6-6-6 6 6 6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function ArrowUp({ size = 16, className }: IconProps) {
   return (
     <svg {...base(size)} className={className} fill="none">

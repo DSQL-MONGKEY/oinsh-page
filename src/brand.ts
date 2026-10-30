@@ -20,6 +20,15 @@ export type Product = {
   sizes: string[]
 }
 
+export type Bundle = {
+  id: string
+  name: string
+  description: string
+  itemIds: string[]
+  badge?: string
+  featured?: boolean
+}
+
 export type Look = {
   image: string
   imageAlt: string
@@ -92,6 +101,29 @@ export type Brand = {
     meta: string
   }
   products: Product[]
+  accessoriesSection: {
+    eyebrow: string
+    title: string
+    titleAccent: string
+    intro: string
+    meta: string
+    railHint: string
+    prevLabel: string
+    nextLabel: string
+    bundleEyebrow: string
+    bundleTitle: string
+    bundleTitleAccent: string
+    bundleIntro: string
+    bundleItemsLabel: string
+    bundleTotalLabel: string
+    bundleSizeLabel: string
+    bundleCtaLabel: string
+    bundleNote: string
+    customCtaLabel: string
+    customWhatsappMessage: string
+  }
+  accessories: Product[]
+  bundles: Bundle[]
   quickView: {
     quickLabel: string
     sizeLabel: string
@@ -221,6 +253,7 @@ export const brand: Brand = {
   },
   nav: [
     { label: 'New In', href: '#new-in' },
+    { label: 'Accessories', href: '#accessories' },
     { label: 'The Blue Edit', href: '#blue-edit' },
     { label: 'Our Story', href: '#story' },
     { label: 'Lookbook', href: '#lookbook' },
@@ -347,6 +380,228 @@ export const brand: Brand = {
         'Tersedia XS–XL',
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+  ],
+  accessoriesSection: {
+    eyebrow: 'Aksesori — Mix & Match',
+    title: 'The finishing',
+    titleAccent: 'touch.',
+    intro:
+      'Detail kecil yang membuat look terasa selesai. Satu tas, sepasang anting, atau set lengkap—semua dirancang untuk hidup bersama koleksi Ji&Co.',
+    meta: '8 aksesori — One size',
+    railHint: 'Geser untuk melihat semua',
+    prevLabel: 'Aksesori sebelumnya',
+    nextLabel: 'Aksesori berikutnya',
+    bundleEyebrow: 'Paket Mix & Match',
+    bundleTitle: 'Satu look,',
+    bundleTitleAccent: 'langsung lengkap.',
+    bundleIntro:
+      'Tiga set terkurasi dari pieces favorit dan aksesorinya. Pilih set, tentukan ukuran pakaian, lalu pesan lewat WhatsApp.',
+    bundleItemsLabel: 'Isi paket',
+    bundleTotalLabel: 'Total set',
+    bundleSizeLabel: 'Ukuran',
+    bundleCtaLabel: 'Pesan paket via WhatsApp',
+    bundleNote:
+      'Harga set adalah total item di dalamnya. Ketersediaan dan ongkir dikonfirmasi melalui WhatsApp.',
+    customCtaLabel: 'Racik paketmu sendiri',
+    customWhatsappMessage:
+      'Halo Ji&Co, saya ingin dibantu meracik paket mix & match aksesori.',
+  },
+  accessories: [
+    {
+      id: 'acc-tote',
+      name: 'The Everyday Tote',
+      category: 'Tas',
+      color: 'Stone',
+      price: 389000,
+      badge: 'New',
+      badgeTone: 'light',
+      image: '/images/accessory-tote.webp',
+      imageAlt:
+        'Tas tote abu-abu bertekstur dengan handle kulit cokelat di studio terang',
+      imagePosition: '50% 50%',
+      description:
+        'Tote dengan ruang lega untuk hari yang panjang. Cukup untuk tablet, botol air, dan semua hal kecil yang kamu butuhkan.',
+      details: [
+        'Kulit vegan bertekstur',
+        'Muat tablet 11 inci dan essentials',
+        'Strap bahu yang bisa dilepas',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-scarf',
+      name: 'The Silk Scarf',
+      category: 'Scarf',
+      color: 'Lagoon',
+      price: 179000,
+      badge: 'The Blue Edit',
+      badgeTone: 'sky',
+      image: '/images/accessory-scarf.webp',
+      imageAlt:
+        'Scarf satin biru yang diikat di leher dengan sentuhan lembut',
+      imagePosition: '50% 54%',
+      description:
+        'Satin dengan kilau tenang dan warna biru yang menghidupkan look netral. Bisa dipakai di leher, rambut, atau handle tas.',
+      details: [
+        'Satin 55 × 55 cm',
+        'Bisa dipakai di leher, rambut, atau tas',
+        'Hand-finished edges',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-hoops',
+      name: 'The Gold Hoops',
+      category: 'Anting',
+      color: 'Gold',
+      price: 149000,
+      badge: 'Bestseller',
+      badgeTone: 'sky',
+      image: '/images/accessory-hoops.webp',
+      imageAlt:
+        'Anting hoop emas bertekstur di atas kain putih yang jatuh lembut',
+      imagePosition: '50% 50%',
+      description:
+        'Hoop dengan tekstur yang menangkap cahaya. Cukup kecil untuk dipakai setiap hari, cukup istimewa untuk malam.',
+      details: [
+        'Gold-plated brass',
+        'Diameter 2,5 cm',
+        'Nickel-free',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-hairpin',
+      name: 'The Pearl Hairpin',
+      category: 'Jepitan',
+      color: 'Pearl',
+      price: 129000,
+      badge: 'Limited',
+      badgeTone: 'light',
+      image: '/images/accessory-hairpin.webp',
+      imageAlt:
+        'Hairpin emas dengan detail mutiara di atas permukaan marmer terang',
+      imagePosition: '50% 62%',
+      description:
+        'Sentuhan mutiara untuk rambut yang ingin sedikit lebih istimewa. Ringan, lembut, dan mudah diselipkan.',
+      details: [
+        'Gold-tone dengan pearl detail',
+        'Panjang 8 cm',
+        'Sisir rambut yang ringan',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-necklace',
+      name: 'The Fine Necklace',
+      category: 'Kalung',
+      color: 'Gold',
+      price: 189000,
+      badge: 'Bestseller',
+      badgeTone: 'light',
+      image: '/images/accessory-necklace.webp',
+      imageAlt:
+        'Kalung rantai emas tipis dipajang pada platform putih minimalis',
+      imagePosition: '50% 52%',
+      description:
+        'Rantai tipis dengan kilau lembut yang membuat leher terlihat lebih anggun. Mudah dipadukan, sulit dilepas.',
+      details: [
+        'Gold-plated brass',
+        'Panjang 42 cm + extender 5 cm',
+        'Lobster clasp',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-bracelet',
+      name: 'The Chain Bracelet',
+      category: 'Gelang',
+      color: 'Gold',
+      price: 159000,
+      badge: 'New',
+      badgeTone: 'sky',
+      image: '/images/accessory-bracelet.webp',
+      imageAlt:
+        'Gelang rantai emas dengan clasp kecil di atas kain putih',
+      imagePosition: '50% 50%',
+      description:
+        'Gelang rantai halus yang bergerak cantik di pergelangan. Cukup satu, atau susun beberapa untuk look yang lebih personal.',
+      details: [
+        'Gold-plated brass',
+        'Panjang 17 cm + extender',
+        'Lobster clasp',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-belt',
+      name: 'The Leather Belt',
+      category: 'Belt',
+      color: 'Black',
+      price: 219000,
+      badge: 'Essentials',
+      badgeTone: 'light',
+      image: '/images/accessory-belt.webp',
+      imageAlt:
+        'Belt kulit hitam dengan buckle silver ditata di atas permukaan terang',
+      imagePosition: '62% 50%',
+      description:
+        'Belt bersih dengan buckle sederhana untuk merapikan siluet. Pas di pinggang, pas di pinggul—sesuai caramu memakainya.',
+      details: [
+        'Kulit sintetis premium',
+        'Lebar 2,5 cm',
+        'Buckle silver-tone',
+      ],
+      sizes: ['One size'],
+    },
+    {
+      id: 'acc-sunglasses',
+      name: 'The Everyday Shades',
+      category: 'Sunglasses',
+      color: 'Tortoise',
+      price: 229000,
+      badge: 'New',
+      badgeTone: 'sky',
+      image: '/images/accessory-sunglasses.webp',
+      imageAlt:
+        'Sunglasses tortoise shell dengan lensa cokelat di atas latar beige',
+      imagePosition: '50% 54%',
+      description:
+        'Bingkai tortoise yang lembut dengan lensa hangat. Sentuhan akhir untuk hari yang terang dan mood yang ringan.',
+      details: [
+        'Frame acetate',
+        'Lensa UV400',
+        'Termasuk pouch',
+      ],
+      sizes: ['One size'],
+    },
+  ],
+  bundles: [
+    {
+      id: 'everyday-set',
+      name: 'The Everyday Set',
+      description:
+        'Untuk hari yang ingin terasa rapi tanpa usaha lebih. Kemeja linen, tote, dan hoops yang selalu bisa diandalkan.',
+      itemIds: ['linen-shirt', 'acc-tote', 'acc-hoops'],
+      badge: 'Most loved',
+      featured: true,
+    },
+    {
+      id: 'evening-set',
+      name: 'The Evening Set',
+      description:
+        'Satin, mutiara, dan kilau tipis untuk malam yang tenang. Satu set untuk momen yang ingin terasa istimewa.',
+      itemIds: ['satin-set', 'acc-hairpin', 'acc-necklace'],
+      badge: 'Evening edit',
+    },
+    {
+      id: 'blue-set',
+      name: 'The Blue Set',
+      description:
+        'Biru langit dari kemeja sampai scarf, diikat dengan belt hitam yang tegas. Simple, tapi berkesan.',
+      itemIds: ['blue-shirt', 'acc-scarf', 'acc-belt'],
+      badge: 'The Blue Edit',
     },
   ],
   quickView: {
@@ -542,6 +797,7 @@ export const brand: Brand = {
         title: 'Jelajahi',
         links: [
           { label: 'New In', href: '#new-in' },
+          { label: 'Accessories', href: '#accessories' },
           { label: 'The Blue Edit', href: '#blue-edit' },
           { label: 'Our Story', href: '#story' },
           { label: 'Lookbook', href: '#lookbook' },
