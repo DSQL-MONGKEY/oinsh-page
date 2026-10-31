@@ -241,7 +241,7 @@ export const brand: Brand = {
       main: '#EEE4DA',
       secondary: '#C8A49F',
       sand: '#D8C4AC',
-      green: '#4DDE13',
+      green: '#4D0E13',
       accent: '#4D1E2A',
       line: '#CDBAA4',
       muted: '#463A31',
