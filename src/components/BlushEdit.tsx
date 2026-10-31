@@ -38,7 +38,7 @@ export default function BlushEdit() {
           </ul>
 
           <div className="mt-[2.1rem] flex flex-wrap items-center gap-[1.6rem]">
-            <a className="btn btn-ink min-h-12" href={edit.primaryCta.href}>
+            <a className="btn btn-brand min-h-12" href={edit.primaryCta.href}>
               {edit.primaryCta.label}
               <ArrowUpRight size={14} />
             </a>

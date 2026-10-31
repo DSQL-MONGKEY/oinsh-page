@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="grid min-h-9 place-items-center bg-ink px-5 py-2 text-center text-[0.58rem] leading-[1.5] font-medium tracking-[0.18em] text-white/90 uppercase max-sm:text-[0.52rem]">
+      <div className="grid min-h-9 place-items-center bg-burgundy px-5 py-2 text-center text-[0.58rem] leading-[1.5] font-medium tracking-[0.18em] text-main/90 uppercase max-sm:text-[0.52rem]">
         <p className="max-sm:hidden">{brand.announcement}</p>
         <p className="hidden max-sm:block">{brand.announcementShort}</p>
       </div>
@@ -99,7 +99,7 @@ export default function Header() {
 
           <div className="flex items-center justify-self-end gap-3.5 max-sm:gap-2">
             <a
-              className="hidden size-[2.3rem] place-items-center rounded-full border border-line transition-colors hover:border-ink hover:bg-ink hover:text-white min-[1101px]:grid"
+              className="hidden size-[2.3rem] place-items-center rounded-full border border-line transition-colors hover:border-burgundy hover:bg-burgundy hover:text-main min-[1101px]:grid"
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noreferrer"
@@ -108,7 +108,7 @@ export default function Header() {
               <InstagramIcon size={16} />
             </a>
             <a
-              className="btn btn-ink hidden min-h-10 text-[0.58rem] min-[641px]:inline-flex"
+              className="btn btn-brand hidden min-h-10 text-[0.58rem] min-[641px]:inline-flex"
               href={brand.header.ctaHref}
             >
               {brand.header.ctaLabel}
@@ -171,7 +171,7 @@ export default function Header() {
 
           <div className="container-page flex shrink-0 flex-col gap-6 pb-8">
             <a
-              className="btn btn-ink min-h-12"
+              className="btn btn-brand min-h-12"
               href={brand.header.ctaHref}
               onClick={() => setOpen(false)}
             >

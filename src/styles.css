@@ -43,7 +43,7 @@
   --color-main: var(--main);
   --color-secondary: var(--secondary);
   --color-sand: var(--sand);
-  --color-green: var(--green);
+  --color-burgundy: var(--burgundy);
   --color-accent: var(--accent);
   --color-line: var(--line);
   --color-muted: var(--muted);
@@ -74,8 +74,8 @@
   }
 
   ::selection {
-    background: var(--green);
-    color: var(--ink);
+    background: var(--burgundy);
+    color: var(--main);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -113,12 +113,16 @@
   @apply inline-flex items-center justify-center gap-2.5 rounded-full border border-transparent px-6 font-body text-[0.62rem] leading-none font-semibold tracking-[0.16em] uppercase transition-colors;
 }
 
-@utility btn-ink {
-  @apply bg-ink text-white hover:bg-accent;
+@utility btn-brand {
+  @apply bg-burgundy text-main hover:bg-ink;
+}
+
+@utility btn-cream {
+  @apply bg-main text-burgundy hover:bg-white;
 }
 
 @utility btn-outline {
-  @apply border-ink/25 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-white;
+  @apply border-ink/25 bg-transparent text-ink hover:border-burgundy hover:bg-burgundy hover:text-main;
 }
 
 @utility text-link {

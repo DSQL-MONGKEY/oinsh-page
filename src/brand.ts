@@ -216,7 +216,7 @@ export type Brand = {
 
 export const brand: Brand = {
   name: 'Ji&Co',
-  meaning: 'JoI',
+  meaning: 'Joveline & Indhika',
   tagline: 'Everyday elegance, made to fit.',
   description:
     'Ji&Co menghadirkan fashion kekinian yang simple, sederhana, namun tetap trendi—dirancang nyaman dan pas untuk banyak bentuk tubuh.',
@@ -241,8 +241,8 @@ export const brand: Brand = {
       main: '#EEE4DA',
       secondary: '#C8A49F',
       sand: '#D8C4AC',
-      green: '#4D0E13',
-      accent: '#4D1E2A',
+      burgundy: '#4D0E13',
+      accent: '#4D0E13',
       line: '#CDBAA4',
       muted: '#463A31',
     },
@@ -386,7 +386,7 @@ export const brand: Brand = {
     title: 'The finishing',
     titleAccent: 'touch.',
     intro:
-      'Detail kecil yang membuat look terasa selesai. Satu tas, sepasang anting, atau set lengkap—semua dirancang untuk hidup bersama koleksi Ji&Co.',
+      'Bukan sekadar pemanis tampilan, tapi inti dari gayamu. Temukan koleksi tas dan aksesori Ji&Co yang bikin penampilanmu otomatis keliatan lebih matang dan berkarakter.',
     meta: '8 aksesori — One size',
     railHint: 'Geser untuk melihat semua',
     prevLabel: 'Aksesori sebelumnya',
@@ -635,12 +635,12 @@ export const brand: Brand = {
     title: 'Lahir dari pertemanan,',
     titleAccent: 'tumbuh dari gaya.',
     paragraphs: [
-      'Ji&Co berawal dari dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
+      'Ji&Co berawal dari Joveline dan Indhika—dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
       'Kami ingin menghadirkan fashion kekinian yang menjangkau banyak kalangan perempuan: model yang simple, sederhana, namun tetap trendi. Potongan dirancang dengan hati-hati agar nyaman dan pas di berbagai bentuk tubuh, untuk menemani hari-hari nyata—bukan hanya satu momen istimewa.',
     ],
     quote:
       'Elegan bukan tentang menjadi pusat perhatian. Elegan adalah saat kamu merasa nyaman menjadi diri sendiri.',
-    signature: 'JoI',
+    signature: 'Joveline & Indhika',
     role: 'Founders of Ji&Co',
     image: '/images/story-atelier.webp',
     imageAlt:

@@ -39,7 +39,7 @@ export default function QuickView({ product, onClose }: Props) {
   return (
     <dialog
       ref={dialogRef}
-      className="m-auto max-h-[calc(100vh-2rem)] w-[min(64rem,calc(100vw-2rem))] max-w-none border-0 bg-transparent p-0 text-ink backdrop:bg-ink/60 backdrop:backdrop-blur-[7px] max-md:max-h-[calc(100vh-1.5rem)] max-md:w-[calc(100vw-1.5rem)]"
+      className="m-auto max-h-[calc(100vh-2rem)] w-[min(64rem,calc(100vw-2rem))] max-w-none border-0 bg-transparent p-0 text-ink backdrop:bg-burgundy/60 backdrop:backdrop-blur-[7px] max-md:max-h-[calc(100vh-1.5rem)] max-md:w-[calc(100vw-1.5rem)]"
       aria-labelledby="quick-view-title"
       onClose={onClose}
       onClick={(event) => {
@@ -50,7 +50,7 @@ export default function QuickView({ product, onClose }: Props) {
     >
       <div className="relative grid max-h-[calc(100vh-2rem)] grid-cols-2 overflow-hidden bg-white max-md:block max-md:max-h-[calc(100vh-1.5rem)] max-md:overflow-y-auto">
         <button
-          className="absolute top-4 right-4 z-[2] grid size-10 place-items-center rounded-full border border-line bg-white transition-colors hover:bg-ink hover:text-white"
+          className="absolute top-4 right-4 z-[2] grid size-10 place-items-center rounded-full border border-line bg-white transition-colors hover:bg-burgundy hover:text-main"
           type="button"
           onClick={() => dialogRef.current?.close()}
           aria-label={brand.quickView.closeLabel}
@@ -102,7 +102,7 @@ export default function QuickView({ product, onClose }: Props) {
                       checked={activeSize === option}
                       onChange={() => setSize(option)}
                     />
-                    <span className="grid min-h-[2.45rem] min-w-[2.8rem] cursor-pointer place-items-center border border-line px-[0.7rem] text-[0.66rem] transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent hover:border-ink">
+                    <span className="grid min-h-[2.45rem] min-w-[2.8rem] cursor-pointer place-items-center border border-line px-[0.7rem] text-[0.66rem] transition-colors peer-checked:border-ink peer-checked:bg-burgundy peer-checked:text-main peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent hover:border-ink">
                       {option}
                     </span>
                   </label>
@@ -128,7 +128,7 @@ export default function QuickView({ product, onClose }: Props) {
           </div>
 
           <a
-            className="btn btn-ink mt-2.5 min-h-12 w-full"
+            className="btn btn-brand mt-2.5 min-h-12 w-full"
             href={orderUrl}
             target="_blank"
             rel="noreferrer"

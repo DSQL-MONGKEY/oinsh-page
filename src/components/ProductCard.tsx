@@ -39,8 +39,8 @@ export default function ProductCard({
           <span
             className={`absolute top-3.5 left-3.5 px-2.5 py-1.5 text-[0.53rem] leading-none font-semibold tracking-[0.14em] uppercase max-sm:top-[0.65rem] max-sm:left-[0.65rem] max-sm:px-2 max-sm:py-1.5 max-sm:text-[0.48rem] ${
               product.badgeTone === 'accent'
-                ? 'bg-green'
-                : 'bg-white'
+                ? 'bg-burgundy text-main'
+                : 'bg-white text-ink'
             }`}
           >
             {product.badge}

@@ -4,7 +4,7 @@ import { brand } from '../brand'
 export default function Marquee() {
   return (
     <div
-      className="overflow-hidden border-y border-ink/[0.08] bg-green py-[1.15rem] max-sm:py-4"
+      className="overflow-hidden border-y border-main/10 bg-burgundy text-main py-[1.15rem] max-sm:py-4"
       aria-hidden="true"
     >
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
@@ -24,7 +24,7 @@ export default function Marquee() {
                 >
                   {item}
                 </span>
-                <span className="size-[5px] shrink-0 rotate-45 bg-ink" />
+                <span className="size-[5px] shrink-0 rotate-45 bg-sand" />
               </Fragment>
             ))}
           </div>

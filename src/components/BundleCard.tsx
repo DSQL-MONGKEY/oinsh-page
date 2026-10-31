@@ -144,7 +144,7 @@ export default function BundleCard({ bundle }: Props) {
         </div>
 
         <a
-          className="btn btn-ink mt-0.5 min-h-12 w-full"
+          className="btn btn-brand mt-0.5 min-h-12 w-full"
           href={orderUrl}
           target="_blank"
           rel="noreferrer"

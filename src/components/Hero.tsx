@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-[2.1rem] flex animate-rise flex-wrap items-center gap-[1.6rem] [animation-delay:280ms] motion-reduce:animate-none max-sm:gap-[1.1rem]">
-            <a className="btn btn-ink min-h-12" href={hero.primaryCta.href}>
+            <a className="btn btn-brand min-h-12" href={hero.primaryCta.href}>
               {hero.primaryCta.label}
               <ArrowUpRight size={14} />
             </a>
@@ -54,7 +54,7 @@ export default function Hero() {
               fetchPriority="high"
               decoding="async"
             />
-            <div className="absolute bottom-[1.1rem] left-[1.1rem] flex flex-col gap-1 border border-ink/[0.06] bg-green px-[1.15rem] py-[0.9rem] text-ink max-sm:bottom-[0.8rem] max-sm:left-[0.8rem] max-sm:px-[0.9rem] max-sm:py-[0.75rem]">
+            <div className="absolute bottom-[1.1rem] left-[1.1rem] flex flex-col gap-1 border border-main/10 bg-burgundy px-[1.15rem] py-[0.9rem] text-main max-sm:bottom-[0.8rem] max-sm:left-[0.8rem] max-sm:px-[0.9rem] max-sm:py-[0.75rem]">
               <span className="text-[0.53rem] font-semibold tracking-[0.18em] uppercase">
                 {hero.imageBadge}
               </span>

@@ -23,9 +23,12 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="section-space relative scroll-mt-24 overflow-hidden bg-green" id="newsletter">
+    <section
+      className="section-space relative scroll-mt-24 overflow-hidden bg-burgundy text-main"
+      id="newsletter"
+    >
       <span
-        className="pointer-events-none absolute -right-24 -bottom-80 font-display text-[clamp(18rem,34vw,32rem)] leading-none italic text-white/[0.09] max-sm:hidden"
+        className="pointer-events-none absolute -right-24 -bottom-80 font-display text-[clamp(18rem,34vw,32rem)] leading-none italic text-secondary/[0.12] max-sm:hidden"
         aria-hidden="true"
       >
         &amp;
@@ -33,14 +36,14 @@ export default function Newsletter() {
 
       <div className="container-page relative z-10 grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-end gap-[clamp(2.5rem,6vw,6rem)] max-[960px]:grid-cols-1 max-[960px]:items-start max-[960px]:gap-9">
         <Reveal>
-          <p className="flex items-center gap-3 text-[0.63rem] leading-[1.4] font-bold tracking-[0.22em] text-ink uppercase before:h-px before:w-7 before:shrink-0 before:bg-current">
+          <p className="flex items-center gap-3 text-[0.63rem] leading-[1.4] font-bold tracking-[0.22em] text-main/70 uppercase before:h-px before:w-7 before:shrink-0 before:bg-current">
             {newsletter.eyebrow}
           </p>
           <h2 className="mt-5 font-display text-[clamp(2.9rem,5.6vw,5.2rem)] leading-[0.92] font-normal tracking-[-0.04em] text-balance">
             {newsletter.title}{' '}
-            <em className="italic text-accent">{newsletter.titleAccent}</em>
+            <em className="italic text-secondary">{newsletter.titleAccent}</em>
           </h2>
-          <p className="mt-[1.4rem] max-w-[30rem] text-[0.94rem] leading-[1.8] text-ink/70">
+          <p className="mt-[1.4rem] max-w-[30rem] text-[0.94rem] leading-[1.8] text-main/75">
             {newsletter.description}
           </p>
         </Reveal>
@@ -51,16 +54,16 @@ export default function Newsletter() {
         >
           {status === 'success' ? (
             <div
-              className="flex flex-col items-start gap-[0.7rem] border-t border-ink/35 pt-[1.2rem]"
+              className="flex flex-col items-start gap-[0.7rem] border-t border-main/25 pt-[1.2rem]"
               role="status"
             >
-              <span className="mb-1 grid size-[2.8rem] place-items-center rounded-full bg-ink text-white">
+              <span className="mb-1 grid size-[2.8rem] place-items-center rounded-full bg-main text-burgundy">
                 <CheckIcon size={20} />
               </span>
               <h3 className="font-display text-[clamp(1.8rem,2.8vw,2.4rem)] leading-[1.1] font-normal tracking-[-0.02em]">
                 {newsletter.successTitle}
               </h3>
-              <p className="max-w-[26rem] text-[0.88rem] leading-[1.7] text-ink/70">
+              <p className="max-w-[26rem] text-[0.88rem] leading-[1.7] text-main/70">
                 {newsletter.successText}
               </p>
             </div>
@@ -69,9 +72,9 @@ export default function Newsletter() {
               <label className="sr-only" htmlFor="newsletter-email">
                 Alamat email
               </label>
-              <div className="flex items-center gap-4 border-b border-ink/55 max-sm:flex-col max-sm:items-stretch max-sm:gap-3 max-sm:border-b-0">
+              <div className="flex items-center gap-4 border-b border-main/30 max-sm:flex-col max-sm:items-stretch max-sm:gap-3 max-sm:border-b-0">
                 <input
-                  className="min-w-0 flex-1 bg-transparent py-[1.1rem] text-[0.92rem] text-ink placeholder:text-ink/70 max-sm:border-b max-sm:border-ink/55"
+                  className="min-w-0 flex-1 bg-transparent py-[1.1rem] text-[0.92rem] text-main placeholder:text-main/55 focus-visible:outline-main max-sm:border-b max-sm:border-main/30"
                   id="newsletter-email"
                   type="email"
                   value={email}
@@ -88,7 +91,7 @@ export default function Newsletter() {
                   required
                 />
                 <button
-                  className="btn btn-ink mb-[0.55rem] min-h-12 shrink-0 max-sm:mb-0 max-sm:self-start"
+                  className="btn btn-cream mb-[0.55rem] min-h-12 shrink-0 focus-visible:outline-main max-sm:mb-0 max-sm:self-start"
                   type="submit"
                 >
                   {newsletter.buttonLabel}
@@ -96,14 +99,14 @@ export default function Newsletter() {
               </div>
               {status === 'error' && (
                 <p
-                  className="mt-3 text-[0.72rem] leading-[1.5] text-accent"
+                  className="mt-3 text-[0.72rem] leading-[1.5] text-secondary"
                   id="newsletter-error"
                   role="alert"
                 >
                   {newsletter.error}
                 </p>
               )}
-              <p className="mt-[0.9rem] text-[0.66rem] leading-[1.6] text-muted">
+              <p className="mt-[0.9rem] text-[0.66rem] leading-[1.6] text-main/65">
                 {newsletter.note}
               </p>
             </form>
