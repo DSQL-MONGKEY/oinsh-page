@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#FFCED8" />
+  <rect width="64" height="64" rx="14" fill="#4DDE13" />
   <text
     x="32"
     y="46"
@@ -11,5 +11,5 @@
   >
     J
   </text>
-  <circle cx="47" cy="44" r="2.5" fill="#7A3F4A" />
+  <circle cx="47" cy="44" r="2.5" fill="#4D1E2A" />
 </svg>

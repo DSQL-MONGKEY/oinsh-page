@@ -23,7 +23,7 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="section-space relative scroll-mt-24 overflow-hidden bg-rose" id="newsletter">
+    <section className="section-space relative scroll-mt-24 overflow-hidden bg-green" id="newsletter">
       <span
         className="pointer-events-none absolute -right-24 -bottom-80 font-display text-[clamp(18rem,34vw,32rem)] leading-none italic text-white/[0.09] max-sm:hidden"
         aria-hidden="true"
@@ -71,7 +71,7 @@ export default function Newsletter() {
               </label>
               <div className="flex items-center gap-4 border-b border-ink/55 max-sm:flex-col max-sm:items-stretch max-sm:gap-3 max-sm:border-b-0">
                 <input
-                  className="min-w-0 flex-1 bg-transparent py-[1.1rem] text-[0.92rem] text-ink placeholder:text-ink/50 max-sm:border-b max-sm:border-ink/55"
+                  className="min-w-0 flex-1 bg-transparent py-[1.1rem] text-[0.92rem] text-ink placeholder:text-ink/70 max-sm:border-b max-sm:border-ink/55"
                   id="newsletter-email"
                   type="email"
                   value={email}
@@ -96,7 +96,7 @@ export default function Newsletter() {
               </div>
               {status === 'error' && (
                 <p
-                  className="mt-3 text-[0.72rem] leading-[1.5] text-[#7a1b1b]"
+                  className="mt-3 text-[0.72rem] leading-[1.5] text-accent"
                   id="newsletter-error"
                   role="alert"
                 >

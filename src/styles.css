@@ -42,8 +42,8 @@
   --color-ink: var(--ink);
   --color-main: var(--main);
   --color-secondary: var(--secondary);
-  --color-blush: var(--blush);
-  --color-rose: var(--rose);
+  --color-sand: var(--sand);
+  --color-green: var(--green);
   --color-accent: var(--accent);
   --color-line: var(--line);
   --color-muted: var(--muted);
@@ -74,7 +74,7 @@
   }
 
   ::selection {
-    background: var(--rose);
+    background: var(--green);
     color: var(--ink);
   }
 

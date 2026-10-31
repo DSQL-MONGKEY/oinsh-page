@@ -7,7 +7,7 @@ export default function Lookbook() {
   const lookbook = brand.lookbook
 
   return (
-    <section className="section-space scroll-mt-24 bg-blush" id="lookbook">
+    <section className="section-space scroll-mt-24 bg-sand" id="lookbook">
       <div className="container-page">
         <Reveal className="mb-[clamp(2.5rem,5vw,4rem)] flex items-end justify-between gap-12 max-[960px]:flex-col max-[960px]:items-start max-[960px]:gap-6">
           <div>

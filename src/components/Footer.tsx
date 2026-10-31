@@ -36,13 +36,13 @@ export default function Footer() {
       <div className="container-page">
         <div className="grid grid-cols-[1.4fr_repeat(3,minmax(0,0.8fr))] gap-[clamp(2rem,4vw,4rem)] py-[clamp(3.5rem,7vw,6rem)] pb-[clamp(2.5rem,5vw,4rem)] max-[960px]:grid-cols-3 max-[760px]:grid-cols-2">
           <div className="max-[960px]:col-span-full">
-            <Wordmark className="text-[2rem] text-white [&_em]:text-rose" />
+            <Wordmark className="text-[2rem] text-white [&_em]:text-green" />
             <p className="mt-[1.15rem] max-w-[24rem] text-[0.88rem] leading-[1.8] text-white/60">
               {footer.blurb}
             </p>
             <div className="mt-[1.6rem] flex gap-3">
               <a
-                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-green hover:bg-green hover:text-ink"
                 href={brand.contact.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -51,7 +51,7 @@ export default function Footer() {
                 <InstagramIcon size={16} />
               </a>
               <a
-                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-green hover:bg-green hover:text-ink"
                 href={`https://wa.me/${brand.contact.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
@@ -60,7 +60,7 @@ export default function Footer() {
                 <WhatsAppIcon size={16} />
               </a>
               <a
-                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-green hover:bg-green hover:text-ink"
                 href={`mailto:${brand.contact.email}`}
                 aria-label={`Email ${brand.name}`}
               >
@@ -79,7 +79,7 @@ export default function Footer() {
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
-                        className="text-[0.82rem] leading-[1.6] text-white/60 transition-colors hover:text-rose"
+                        className="text-[0.82rem] leading-[1.6] text-white/60 transition-colors hover:text-green"
                         href={link.href}
                         target={link.external ? '_blank' : undefined}
                         rel={link.external ? 'noreferrer' : undefined}
@@ -110,7 +110,7 @@ export default function Footer() {
           <p>
             {footer.creditPrefix}{' '}
             <a
-              className="underline underline-offset-[3px] transition-colors hover:text-rose"
+              className="underline underline-offset-[3px] transition-colors hover:text-green"
               href={footer.creditHref}
               target="_blank"
               rel="noreferrer"
@@ -119,7 +119,7 @@ export default function Footer() {
             </a>
           </p>
           <a
-            className="inline-flex items-center gap-[0.45rem] text-[0.56rem] font-semibold tracking-[0.14em] text-white/70 uppercase transition-colors hover:text-rose"
+            className="inline-flex items-center gap-[0.45rem] text-[0.56rem] font-semibold tracking-[0.14em] text-white/70 uppercase transition-colors hover:text-green"
             href="#home"
           >
             {footer.backToTop}
@@ -129,7 +129,7 @@ export default function Footer() {
       </div>
 
       <div className="overflow-hidden border-t border-white/[0.08]" aria-hidden="true">
-        <Wordmark className="block w-full pt-[0.12em] text-center text-[clamp(7rem,23vw,21rem)] leading-[0.68] font-normal tracking-[-0.06em] text-white/[0.06] whitespace-nowrap [&_em]:text-rose/[0.18] max-sm:text-[clamp(6rem,31vw,12rem)]" />
+        <Wordmark className="block w-full pt-[0.12em] text-center text-[clamp(7rem,23vw,21rem)] leading-[0.68] font-normal tracking-[-0.06em] text-white/[0.06] whitespace-nowrap [&_em]:text-green/[0.18] max-sm:text-[clamp(6rem,31vw,12rem)]" />
       </div>
     </footer>
   )

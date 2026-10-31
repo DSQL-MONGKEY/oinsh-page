@@ -216,7 +216,7 @@ export type Brand = {
 
 export const brand: Brand = {
   name: 'Ji&Co',
-  meaning: 'Joveline & Indhika',
+  meaning: 'JoI',
   tagline: 'Everyday elegance, made to fit.',
   description:
     'Ji&Co menghadirkan fashion kekinian yang simple, sederhana, namun tetap trendi—dirancang nyaman dan pas untuk banyak bentuk tubuh.',
@@ -238,13 +238,13 @@ export const brand: Brand = {
     colors: {
       ink: '#111214',
       white: '#FFFFFF',
-      main: '#FFF4DE',
-      secondary: '#FFE8C4',
-      blush: '#FFDDDD',
-      rose: '#FFCED8',
-      accent: '#7A3F4A',
-      line: '#EFDFC8',
-      muted: '#63574D',
+      main: '#EEE4DA',
+      secondary: '#C8A49F',
+      sand: '#D8C4AC',
+      green: '#4DDE13',
+      accent: '#4D1E2A',
+      line: '#CDBAA4',
+      muted: '#463A31',
     },
     fonts: {
       display: "'Cormorant Garamond Variable', Georgia, serif",
@@ -268,7 +268,7 @@ export const brand: Brand = {
     title: 'Everyday elegance,',
     titleAccent: 'made to fit.',
     description:
-      'Ji&Co hadir untuk perempuan yang percaya bahwa gaya terbaik tidak perlu berteriak. Potongan bersih, bahan yang nyaman, dan detail yang membuat kamu merasa paling diri sendiri.',
+      'Ji&Co hadir untuk perempuan yang percaya bahwa gaya terbaik tidak perlu berteriak. Potongan yang bersih, material pilihan yang nyaman di kulit, serta detail penuh pertimbangan dirancang khusus untuk merayakan diri seutuhnya.',
     primaryCta: { label: 'Jelajahi Koleksi', href: '#new-in' },
     secondaryCta: { label: 'Kenali Ji&Co', href: '#story' },
     image: '/images/hero-main.webp',
@@ -279,7 +279,6 @@ export const brand: Brand = {
     imageCaption: 'Collection 01 — Jakarta, 2026',
     notes: [
       'Gratis ongkir di atas Rp 500.000',
-      'Pengembalian mudah 7 hari',
       'Dibuat di Indonesia',
     ],
   },
@@ -636,12 +635,12 @@ export const brand: Brand = {
     title: 'Lahir dari pertemanan,',
     titleAccent: 'tumbuh dari gaya.',
     paragraphs: [
-      'Ji&Co berawal dari Joveline dan Indhika—dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
+      'Ji&Co berawal dari dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
       'Kami ingin menghadirkan fashion kekinian yang menjangkau banyak kalangan perempuan: model yang simple, sederhana, namun tetap trendi. Potongan dirancang dengan hati-hati agar nyaman dan pas di berbagai bentuk tubuh, untuk menemani hari-hari nyata—bukan hanya satu momen istimewa.',
     ],
     quote:
       'Elegan bukan tentang menjadi pusat perhatian. Elegan adalah saat kamu merasa nyaman menjadi diri sendiri.',
-    signature: 'Joveline & Indhika',
+    signature: 'JoI',
     role: 'Founders of Ji&Co',
     image: '/images/story-atelier.webp',
     imageAlt:
@@ -822,7 +821,7 @@ export const brand: Brand = {
     title: 'Ji&Co — Everyday Elegance, Made to Fit',
     description:
       'Ji&Co menghadirkan fashion kekinian yang simple, sederhana, namun tetap trendi. Potongan nyaman dan pas untuk banyak bentuk tubuh.',
-    themeColor: '#FFF4DE',
+    themeColor: '#EEE4DA',
   },
 }
 

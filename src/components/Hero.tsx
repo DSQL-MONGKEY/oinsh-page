@@ -46,7 +46,7 @@ export default function Hero() {
         </div>
 
         <figure className="m-0 animate-rise [animation-delay:180ms] motion-reduce:animate-none max-[960px]:mx-auto max-[960px]:w-full max-[960px]:max-w-[36rem]">
-          <div className="relative aspect-[4/5] overflow-hidden bg-blush after:pointer-events-none after:absolute after:inset-0 after:border after:border-ink/[0.07]">
+          <div className="relative aspect-[4/5] overflow-hidden bg-sand after:pointer-events-none after:absolute after:inset-0 after:border after:border-ink/[0.07]">
             <img
               className="h-full w-full object-cover object-[50%_42%]"
               src={hero.image}
@@ -54,7 +54,7 @@ export default function Hero() {
               fetchPriority="high"
               decoding="async"
             />
-            <div className="absolute bottom-[1.1rem] left-[1.1rem] flex flex-col gap-1 border border-ink/[0.06] bg-rose px-[1.15rem] py-[0.9rem] text-ink max-sm:bottom-[0.8rem] max-sm:left-[0.8rem] max-sm:px-[0.9rem] max-sm:py-[0.75rem]">
+            <div className="absolute bottom-[1.1rem] left-[1.1rem] flex flex-col gap-1 border border-ink/[0.06] bg-green px-[1.15rem] py-[0.9rem] text-ink max-sm:bottom-[0.8rem] max-sm:left-[0.8rem] max-sm:px-[0.9rem] max-sm:py-[0.75rem]">
               <span className="text-[0.53rem] font-semibold tracking-[0.18em] uppercase">
                 {hero.imageBadge}
               </span>

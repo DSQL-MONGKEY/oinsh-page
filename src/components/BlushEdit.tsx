@@ -7,7 +7,7 @@ export default function BlushEdit() {
 
   return (
     <section
-      className="section-space scroll-mt-24 overflow-hidden bg-[#FFE2E2] text-ink"
+      className="section-space scroll-mt-24 overflow-hidden bg-secondary text-ink"
       id="blush-edit"
     >
       <div className="container-page grid grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-center gap-[clamp(2.5rem,6vw,6rem)] max-[960px]:grid-cols-1 max-[960px]:gap-10">
@@ -54,7 +54,7 @@ export default function BlushEdit() {
           delay={120}
         >
           <figure className="p-[clamp(0.75rem,1.5vw,1.1rem)] bg-white">
-            <div className="aspect-[4/5] overflow-hidden bg-blush">
+            <div className="aspect-[4/5] overflow-hidden bg-sand">
               <img
                 className="h-full w-full object-cover object-[50%_34%]"
                 src={edit.image}

@@ -55,7 +55,7 @@ export default function Story() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <blockquote className="mt-8 max-w-[31rem] border-l-2 border-rose pl-[1.4rem] font-display text-[clamp(1.45rem,2.2vw,1.95rem)] leading-[1.35] tracking-[-0.01em] italic max-sm:pl-[1.1rem]">
+          <blockquote className="mt-8 max-w-[31rem] border-l-2 border-green pl-[1.4rem] font-display text-[clamp(1.45rem,2.2vw,1.95rem)] leading-[1.35] tracking-[-0.01em] italic max-sm:pl-[1.1rem]">
             “{story.quote}”
           </blockquote>
           <div className="mt-[1.8rem] flex flex-col gap-0.5">
