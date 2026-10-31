@@ -33,7 +33,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="scroll-mt-24 overflow-hidden bg-burgundy text-main/70"
+      className="scroll-mt-24 overflow-hidden border-t border-main/15 bg-burgundy text-main/70"
       id="contact"
     >
       <div className="container-page">

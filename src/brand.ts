@@ -216,7 +216,7 @@ export type Brand = {
 
 export const brand: Brand = {
   name: 'Ji&Co',
-  meaning: 'Joveline & Indhika',
+  meaning: 'JoI',
   tagline: 'Everyday elegance, made to fit.',
   description:
     'Ji&Co menghadirkan fashion kekinian yang simple, sederhana, namun tetap trendi—dirancang nyaman dan pas untuk banyak bentuk tubuh.',
@@ -635,12 +635,12 @@ export const brand: Brand = {
     title: 'Lahir dari pertemanan,',
     titleAccent: 'tumbuh dari gaya.',
     paragraphs: [
-      'Ji&Co berawal dari Joveline dan Indhika—dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
+      'Ji&Co berawal dari dua sahabat yang memiliki minat yang sama besar pada fashion. Nama Ji&Co adalah cara mereka menyatukan dua nama, dua selera, dan satu visi.',
       'Kami ingin menghadirkan fashion kekinian yang menjangkau banyak kalangan perempuan: model yang simple, sederhana, namun tetap trendi. Potongan dirancang dengan hati-hati agar nyaman dan pas di berbagai bentuk tubuh, untuk menemani hari-hari nyata—bukan hanya satu momen istimewa.',
     ],
     quote:
       'Elegan bukan tentang menjadi pusat perhatian. Elegan adalah saat kamu merasa nyaman menjadi diri sendiri.',
-    signature: 'Joveline & Indhika',
+    signature: 'JoI',
     role: 'Founders of Ji&Co',
     image: '/images/story-atelier.webp',
     imageAlt:
