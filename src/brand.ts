@@ -11,7 +11,7 @@ export type Product = {
   color: string
   price: number
   badge?: string
-  badgeTone?: 'light' | 'sky'
+  badgeTone?: 'light' | 'accent'
   image: string
   imageAlt: string
   imagePosition?: string
@@ -132,7 +132,7 @@ export type Brand = {
     note: string
     closeLabel: string
   }
-  blueEdit: {
+  blushEdit: {
     eyebrow: string
     title: string
     titleAccent: string
@@ -237,14 +237,14 @@ export const brand: Brand = {
   theme: {
     colors: {
       ink: '#111214',
-      cream: '#F7F5F1',
       white: '#FFFFFF',
-      sky: '#A9C8FF',
-      'sky-soft': '#EDF3FF',
-      blue: '#2D5CA8',
-      'blue-deep': '#1C3D73',
-      line: '#E5E1D9',
-      muted: '#6B6B70',
+      main: '#FFF4DE',
+      secondary: '#FFE8C4',
+      blush: '#FFDDDD',
+      rose: '#FFCED8',
+      accent: '#7A3F4A',
+      line: '#EFDFC8',
+      muted: '#63574D',
     },
     fonts: {
       display: "'Cormorant Garamond Variable', Georgia, serif",
@@ -254,7 +254,7 @@ export const brand: Brand = {
   nav: [
     { label: 'New In', href: '#new-in' },
     { label: 'Accessories', href: '#accessories' },
-    { label: 'The Blue Edit', href: '#blue-edit' },
+    { label: 'The Blush Edit', href: '#blush-edit' },
     { label: 'Our Story', href: '#story' },
     { label: 'Lookbook', href: '#lookbook' },
     { label: 'Contact', href: '#contact' },
@@ -271,11 +271,11 @@ export const brand: Brand = {
       'Ji&Co hadir untuk perempuan yang percaya bahwa gaya terbaik tidak perlu berteriak. Potongan bersih, bahan yang nyaman, dan detail yang membuat kamu merasa paling diri sendiri.',
     primaryCta: { label: 'Jelajahi Koleksi', href: '#new-in' },
     secondaryCta: { label: 'Kenali Ji&Co', href: '#story' },
-    image: '/images/blue-edit-main.webp',
+    image: '/images/hero-main.webp',
     imageAlt:
-      'Perempuan mengenakan kemeja linen biru muda dan celana denim dengan pose santai',
+      'Perempuan mengenakan dress linen beige dalam studio bernuansa hangat',
     imageBadge: 'New In',
-    imageBadgeSub: 'The Blue Edit',
+    imageBadgeSub: 'The Blush Edit',
     imageCaption: 'Collection 01 — Jakarta, 2026',
     notes: [
       'Gratis ongkir di atas Rp 500.000',
@@ -326,7 +326,7 @@ export const brand: Brand = {
       color: 'Oat',
       price: 289000,
       badge: 'Bestseller',
-      badgeTone: 'sky',
+      badgeTone: 'accent',
       image: '/images/product-knit.webp',
       imageAlt:
         'Perempuan mengenakan pullover rajut berwarna oat dengan latar hangat',
@@ -341,22 +341,22 @@ export const brand: Brand = {
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
     },
     {
-      id: 'blue-shirt',
-      name: 'The Blue Shirt',
+      id: 'blush-shirt',
+      name: 'The Blush Shirt',
       category: 'Atasan',
-      color: 'Cobalt',
+      color: 'Blush',
       price: 349000,
-      badge: 'The Blue Edit',
-      badgeTone: 'sky',
-      image: '/images/product-blue.webp',
+      badge: 'The Blush Edit',
+      badgeTone: 'accent',
+      image: '/images/blush-shirt.webp',
       imageAlt:
-        'Kemeja biru dengan kerah Shanghai dipajang pada manekin',
-      imagePosition: '50% 64%',
+        'Kemeja satin blush dengan potongan relaxed di studio netral',
+      imagePosition: '50% 28%',
       description:
-        'Kemeja kerah Shanghai dalam biru dalam yang tegas. Potongan bersih untuk tampilan rapi yang tetap terasa ringan sepanjang hari.',
+        'Kemeja satin dalam warna blush yang lembut. Potongan relaxed untuk tampilan rapi yang tetap terasa ringan sepanjang hari.',
       details: [
-        'Katun poplin yang breathable',
-        'Kerah Shanghai dan kancing tersembunyi',
+        'Satin dengan drape yang lembut',
+        'Relaxed fit dengan kancing depan',
         'Tersedia XS–XL',
       ],
       sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -433,16 +433,16 @@ export const brand: Brand = {
       id: 'acc-scarf',
       name: 'The Silk Scarf',
       category: 'Scarf',
-      color: 'Lagoon',
+      color: 'Mauve',
       price: 179000,
-      badge: 'The Blue Edit',
-      badgeTone: 'sky',
+      badge: 'The Blush Edit',
+      badgeTone: 'accent',
       image: '/images/accessory-scarf.webp',
       imageAlt:
-        'Scarf satin biru yang diikat di leher dengan sentuhan lembut',
+        'Scarf satin mauve dengan detail bunga dan perhiasan emas',
       imagePosition: '50% 54%',
       description:
-        'Satin dengan kilau tenang dan warna biru yang menghidupkan look netral. Bisa dipakai di leher, rambut, atau handle tas.',
+        'Satin dengan kilau tenang dan warna blush yang menghidupkan look netral. Bisa dipakai di leher, rambut, atau handle tas.',
       details: [
         'Satin 55 × 55 cm',
         'Bisa dipakai di leher, rambut, atau tas',
@@ -457,7 +457,7 @@ export const brand: Brand = {
       color: 'Gold',
       price: 149000,
       badge: 'Bestseller',
-      badgeTone: 'sky',
+      badgeTone: 'accent',
       image: '/images/accessory-hoops.webp',
       imageAlt:
         'Anting hoop emas bertekstur di atas kain putih yang jatuh lembut',
@@ -520,7 +520,7 @@ export const brand: Brand = {
       color: 'Gold',
       price: 159000,
       badge: 'New',
-      badgeTone: 'sky',
+      badgeTone: 'accent',
       image: '/images/accessory-bracelet.webp',
       imageAlt:
         'Gelang rantai emas dengan clasp kecil di atas kain putih',
@@ -562,7 +562,7 @@ export const brand: Brand = {
       color: 'Tortoise',
       price: 229000,
       badge: 'New',
-      badgeTone: 'sky',
+      badgeTone: 'accent',
       image: '/images/accessory-sunglasses.webp',
       imageAlt:
         'Sunglasses tortoise shell dengan lensa cokelat di atas latar beige',
@@ -596,12 +596,12 @@ export const brand: Brand = {
       badge: 'Evening edit',
     },
     {
-      id: 'blue-set',
-      name: 'The Blue Set',
+      id: 'blush-set',
+      name: 'The Blush Set',
       description:
-        'Biru langit dari kemeja sampai scarf, diikat dengan belt hitam yang tegas. Simple, tapi berkesan.',
-      itemIds: ['blue-shirt', 'acc-scarf', 'acc-belt'],
-      badge: 'The Blue Edit',
+        'Blush dari kemeja sampai scarf, diikat dengan belt hitam yang tegas. Simple, tapi berkesan.',
+      itemIds: ['blush-shirt', 'acc-scarf', 'acc-belt'],
+      badge: 'The Blush Edit',
     },
   ],
   quickView: {
@@ -612,23 +612,23 @@ export const brand: Brand = {
     note: 'Kami akan mengonfirmasi ketersediaan, ukuran, dan ongkir melalui WhatsApp.',
     closeLabel: 'Tutup detail produk',
   },
-  blueEdit: {
-    eyebrow: 'The Blue Edit — Limited Capsule',
-    title: 'Blue, the new',
+  blushEdit: {
+    eyebrow: 'The Blush Edit — Limited Capsule',
+    title: 'Blush, the new',
     titleAccent: 'neutral.',
     description:
-      'Biru langit yang tenang, dihadirkan dalam potongan yang mudah dipadukan. Kapsul kecil untuk hari-hari yang ingin terasa sedikit lebih ringan.',
+      'Rona blush yang tenang, dihadirkan dalam potongan yang mudah dipadukan. Kapsul kecil untuk hari-hari yang ingin terasa sedikit lebih ringan.',
     points: [
       'Terbatas 10 pieces',
-      'Sky-blue signature shade',
+      'Blush signature shade',
       'Tersedia XS–XL',
     ],
-    primaryCta: { label: 'Jelajahi The Blue Edit', href: '#new-in' },
+    primaryCta: { label: 'Jelajahi The Blush Edit', href: '#new-in' },
     secondaryCta: { label: 'Lihat Lookbook', href: '#lookbook' },
-    image: '/images/hero-main.webp',
+    image: '/images/blush-shirt.webp',
     imageAlt:
-      'Perempuan mengenakan atasan putih dan celana biru muda di ruang studio bernuansa biru langit',
-    captionLeft: 'The Blue Edit — 01',
+      'Perempuan mengenakan kemeja satin blush dan celana denim di ruang studio terang',
+    captionLeft: 'The Blush Edit — 01',
     captionRight: '10 pieces only',
   },
   story: {
@@ -690,9 +690,9 @@ export const brand: Brand = {
       {
         image: '/images/lookbook-motion.webp',
         imageAlt:
-          'Perempuan mengenakan kaos putih dan jeans biru dalam pose melompat di studio',
-        title: 'In motion',
-        caption: 'White tee, blue denim, no rush.',
+          'Perempuan mengenakan setelan beige dalam cahaya hangat di studio',
+        title: 'Earthy ease',
+        caption: 'Soft tailoring, warm light.',
       },
       {
         image: '/images/lookbook-blazer.webp',
@@ -711,9 +711,9 @@ export const brand: Brand = {
       {
         image: '/images/lookbook-palette.webp',
         imageAlt:
-          'Tiga cardigan rajut warna oat, ivory, dan biru tersusun di atas meja',
+          'Tiga cardigan rajut warna oat, ivory, dan slate tersusun di atas meja',
         title: 'The palette',
-        caption: 'Oat, ivory, sky.',
+        caption: 'Oat, ivory, slate.',
       },
     ],
   },
@@ -771,7 +771,7 @@ export const brand: Brand = {
       {
         image: '/images/lookbook-motion.webp',
         imageAlt:
-          'Perempuan mengenakan kaos putih dan jeans biru dalam pose melompat',
+          'Perempuan mengenakan setelan beige dalam cahaya hangat di studio',
       },
     ],
   },
@@ -798,7 +798,7 @@ export const brand: Brand = {
         links: [
           { label: 'New In', href: '#new-in' },
           { label: 'Accessories', href: '#accessories' },
-          { label: 'The Blue Edit', href: '#blue-edit' },
+          { label: 'The Blush Edit', href: '#blush-edit' },
           { label: 'Our Story', href: '#story' },
           { label: 'Lookbook', href: '#lookbook' },
         ],
@@ -822,7 +822,7 @@ export const brand: Brand = {
     title: 'Ji&Co — Everyday Elegance, Made to Fit',
     description:
       'Ji&Co menghadirkan fashion kekinian yang simple, sederhana, namun tetap trendi. Potongan nyaman dan pas untuk banyak bentuk tubuh.',
-    themeColor: '#A9C8FF',
+    themeColor: '#FFF4DE',
   },
 }
 

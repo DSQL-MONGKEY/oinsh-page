@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
@@ -8,21 +8,19 @@ type Props = {
 
 export default function Reveal({ children, className = '', delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(
+    () => typeof window === 'undefined' || !('IntersectionObserver' in window),
+  )
 
   useEffect(() => {
     const node = ref.current
-    if (!node) return
-
-    if (!('IntersectionObserver' in window)) {
-      node.classList.add('is-visible')
-      return
-    }
+    if (!node || visible) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
+            setVisible(true)
             observer.unobserve(entry.target)
           }
         })
@@ -32,12 +30,14 @@ export default function Reveal({ children, className = '', delay = 0 }: Props) {
 
     observer.observe(node)
     return () => observer.disconnect()
-  }, [])
+  }, [visible])
 
   return (
     <div
       ref={ref}
-      className={`reveal ${className}`.trim()}
+      className={`transition-[opacity,transform] duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
+        visible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+      } ${className}`.trim()}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

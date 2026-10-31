@@ -61,32 +61,45 @@ export default function Header() {
 
   return (
     <>
-      <div className="announcement">
-        <p className="announcement-full">{brand.announcement}</p>
-        <p className="announcement-short">{brand.announcementShort}</p>
+      <div className="grid min-h-9 place-items-center bg-ink px-5 py-2 text-center text-[0.58rem] leading-[1.5] font-medium tracking-[0.18em] text-white/90 uppercase max-sm:text-[0.52rem]">
+        <p className="max-sm:hidden">{brand.announcement}</p>
+        <p className="hidden max-sm:block">{brand.announcementShort}</p>
       </div>
 
-      <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
-        <div className="container header-inner">
+      <header
+        className={`sticky top-0 z-40 border-b bg-main/95 backdrop-blur-md transition-[border-color,box-shadow] duration-300 ${
+          scrolled
+            ? 'border-line shadow-[0_12px_36px_rgba(17,18,20,0.04)]'
+            : 'border-transparent'
+        }`}
+      >
+        <div className="container-page grid h-[4.75rem] grid-cols-[1fr_auto_1fr] items-center gap-6 max-[960px]:grid-cols-[1fr_auto] max-sm:h-[4.25rem]">
           <a
-            className="header-logo"
+            className="justify-self-start"
             href="#home"
             aria-label={`${brand.name} — kembali ke atas`}
           >
-            <Wordmark />
+            <Wordmark className="text-[1.85rem]" />
           </a>
 
-          <nav className="desktop-nav" aria-label="Navigasi utama">
+          <nav
+            className="hidden items-center gap-[clamp(1.1rem,2.2vw,2.2rem)] min-[961px]:flex"
+            aria-label="Navigasi utama"
+          >
             {brand.nav.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a
+                key={item.href}
+                href={item.href}
+                className="relative py-1.5 text-[0.61rem] font-semibold tracking-[0.16em] uppercase after:absolute after:inset-x-0 after:bottom-0.5 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform hover:after:scale-x-100 focus-visible:after:scale-x-100"
+              >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <div className="header-actions">
+          <div className="flex items-center justify-self-end gap-3.5 max-sm:gap-2">
             <a
-              className="header-instagram"
+              className="hidden size-[2.3rem] place-items-center rounded-full border border-line transition-colors hover:border-ink hover:bg-ink hover:text-white min-[1101px]:grid"
               href={brand.contact.instagramUrl}
               target="_blank"
               rel="noreferrer"
@@ -94,12 +107,15 @@ export default function Header() {
             >
               <InstagramIcon size={16} />
             </a>
-            <a className="button button--ink header-shop" href={brand.header.ctaHref}>
+            <a
+              className="btn btn-ink hidden min-h-10 text-[0.58rem] min-[641px]:inline-flex"
+              href={brand.header.ctaHref}
+            >
               {brand.header.ctaLabel}
             </a>
             <button
               ref={triggerRef}
-              className="menu-toggle"
+              className="grid size-11 place-items-center rounded-full border border-line bg-transparent min-[961px]:hidden"
               type="button"
               onClick={() => setOpen(true)}
               aria-label="Buka menu"
@@ -115,17 +131,17 @@ export default function Header() {
       {open && (
         <div
           ref={menuRef}
-          className="mobile-menu"
+          className="fixed inset-0 z-[100] flex animate-menu-in flex-col overflow-y-auto bg-main"
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
           aria-label="Menu navigasi"
         >
-          <div className="container mobile-menu-top">
-            <Wordmark />
+          <div className="container-page flex h-[4.75rem] shrink-0 items-center justify-between border-b border-line max-sm:h-[4.25rem]">
+            <Wordmark className="text-[1.85rem]" />
             <button
               ref={closeRef}
-              className="menu-close"
+              className="grid size-11 place-items-center rounded-full border border-line bg-transparent"
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Tutup menu"
@@ -134,14 +150,18 @@ export default function Header() {
             </button>
           </div>
 
-          <nav className="container mobile-nav" aria-label="Navigasi mobile">
+          <nav
+            className="container-page flex flex-1 flex-col justify-center py-8"
+            aria-label="Navigasi mobile"
+          >
             {brand.nav.map((item, index) => (
               <a
+                className="flex items-baseline gap-4 border-b border-line py-2.5 font-display text-[clamp(2.2rem,9vw,3.5rem)] leading-[1.05] tracking-[-0.03em]"
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
               >
-                <span className="mobile-nav-index">
+                <span className="font-body text-[0.58rem] tracking-[0.16em] text-muted">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 {item.label}
@@ -149,19 +169,25 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="container mobile-menu-foot">
+          <div className="container-page flex shrink-0 flex-col gap-6 pb-8">
             <a
-              className="button button--ink"
+              className="btn btn-ink min-h-12"
               href={brand.header.ctaHref}
               onClick={() => setOpen(false)}
             >
               {brand.header.ctaLabel}
             </a>
-            <div className="mobile-socials">
-              <a href={brand.contact.instagramUrl} target="_blank" rel="noreferrer">
+            <div className="flex flex-wrap gap-5 text-[0.72rem] text-muted">
+              <a
+                href={brand.contact.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {brand.contact.instagram}
               </a>
-              <a href={`mailto:${brand.contact.email}`}>{brand.contact.email}</a>
+              <a href={`mailto:${brand.contact.email}`}>
+                {brand.contact.email}
+              </a>
             </div>
           </div>
         </div>

@@ -10,9 +10,11 @@ export default function Wordmark({ className = '' }: Props) {
   const trailing = parts.slice(1).join('&')
 
   return (
-    <span className={`wordmark ${className}`.trim()}>
+    <span
+      className={`inline-block font-display font-medium leading-none tracking-[-0.04em] ${className}`.trim()}
+    >
       {leading}
-      {parts.length > 1 && <em>&</em>}
+      {parts.length > 1 && <em className="italic text-accent">&</em>}
       {trailing}
     </span>
   )

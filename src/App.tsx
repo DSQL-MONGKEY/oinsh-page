@@ -1,7 +1,7 @@
 import { useEffect, type CSSProperties } from 'react'
 import { brand } from './brand'
 import Accessories from './components/Accessories'
-import BlueEdit from './components/BlueEdit'
+import BlushEdit from './components/BlushEdit'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -21,8 +21,8 @@ const themeStyle = (() => {
     style[`--${name}`] = value
   })
 
-  style['--font-display'] = brand.theme.fonts.display
-  style['--font-body'] = brand.theme.fonts.body
+  style['--brand-display'] = brand.theme.fonts.display
+  style['--brand-body'] = brand.theme.fonts.body
 
   return style as CSSProperties
 })()
@@ -42,18 +42,24 @@ export default function App() {
   }, [])
 
   return (
-    <div className="site" style={themeStyle}>
-      <a className="skip-link" href="#main">
+    <div
+      className="min-h-screen overflow-x-clip bg-main font-body text-ink"
+      style={themeStyle}
+    >
+      <a
+        className="fixed top-4 left-4 z-[200] -translate-y-[200%] bg-ink px-4 py-3 text-[0.65rem] font-semibold tracking-[0.14em] text-white uppercase transition-transform focus:translate-y-0"
+        href="#main"
+      >
         Lewati ke konten
       </a>
       <Header />
       <main id="main">
         <Hero />
+        <Story />
         <Marquee />
         <Products />
         <Accessories />
-        <BlueEdit />
-        <Story />
+        <BlushEdit />
         <Values />
         <Lookbook />
         <Testimonials />

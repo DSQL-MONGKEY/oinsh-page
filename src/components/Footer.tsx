@@ -32,14 +32,17 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="site-footer" id="contact">
-      <div className="container">
-        <div className="footer-main">
-          <div className="footer-brand">
-            <Wordmark />
-            <p className="footer-blurb">{footer.blurb}</p>
-            <div className="footer-socials">
+    <footer className="scroll-mt-24 overflow-hidden bg-ink text-white/70" id="contact">
+      <div className="container-page">
+        <div className="grid grid-cols-[1.4fr_repeat(3,minmax(0,0.8fr))] gap-[clamp(2rem,4vw,4rem)] py-[clamp(3.5rem,7vw,6rem)] pb-[clamp(2.5rem,5vw,4rem)] max-[960px]:grid-cols-3 max-[760px]:grid-cols-2">
+          <div className="max-[960px]:col-span-full">
+            <Wordmark className="text-[2rem] text-white [&_em]:text-rose" />
+            <p className="mt-[1.15rem] max-w-[24rem] text-[0.88rem] leading-[1.8] text-white/60">
+              {footer.blurb}
+            </p>
+            <div className="mt-[1.6rem] flex gap-3">
               <a
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
                 href={brand.contact.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -48,6 +51,7 @@ export default function Footer() {
                 <InstagramIcon size={16} />
               </a>
               <a
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
                 href={`https://wa.me/${brand.contact.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
@@ -56,6 +60,7 @@ export default function Footer() {
                 <WhatsAppIcon size={16} />
               </a>
               <a
+                className="grid size-10 place-items-center rounded-full border border-white/20 transition-colors hover:border-rose hover:bg-rose hover:text-ink"
                 href={`mailto:${brand.contact.email}`}
                 aria-label={`Email ${brand.name}`}
               >
@@ -65,13 +70,16 @@ export default function Footer() {
           </div>
 
           {columns.map((column) => (
-            <div className="footer-column" key={column.title}>
-              <h2>{column.title}</h2>
+            <div key={column.title}>
+              <h2 className="mb-[1.15rem] font-body text-[0.58rem] font-semibold tracking-[0.18em] text-white uppercase">
+                {column.title}
+              </h2>
               {column.links ? (
-                <ul>
+                <ul className="flex flex-col gap-[0.65rem]">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
+                        className="text-[0.82rem] leading-[1.6] text-white/60 transition-colors hover:text-rose"
                         href={link.href}
                         target={link.external ? '_blank' : undefined}
                         rel={link.external ? 'noreferrer' : undefined}
@@ -82,9 +90,14 @@ export default function Footer() {
                   ))}
                 </ul>
               ) : (
-                <ul className="footer-lines">
+                <ul className="flex flex-col gap-[0.65rem]">
                   {column.lines?.map((line) => (
-                    <li key={line}>{line}</li>
+                    <li
+                      className="text-[0.82rem] leading-[1.6] text-white/60"
+                      key={line}
+                    >
+                      {line}
+                    </li>
                   ))}
                 </ul>
               )}
@@ -92,11 +105,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="footer-bottom">
+        <div className="flex flex-wrap items-center justify-between gap-5 border-t border-white/10 py-[1.4rem] text-[0.62rem] leading-[1.6] tracking-[0.02em] text-white/40 max-[760px]:flex-col max-[760px]:items-start max-[760px]:gap-2.5">
           <p>{footer.rights}</p>
           <p>
             {footer.creditPrefix}{' '}
             <a
+              className="underline underline-offset-[3px] transition-colors hover:text-rose"
               href={footer.creditHref}
               target="_blank"
               rel="noreferrer"
@@ -104,15 +118,18 @@ export default function Footer() {
               {footer.creditLabel}
             </a>
           </p>
-          <a className="back-to-top" href="#home">
+          <a
+            className="inline-flex items-center gap-[0.45rem] text-[0.56rem] font-semibold tracking-[0.14em] text-white/70 uppercase transition-colors hover:text-rose"
+            href="#home"
+          >
             {footer.backToTop}
             <ArrowUp size={12} />
           </a>
         </div>
       </div>
 
-      <div className="footer-wordmark-wrap" aria-hidden="true">
-        <Wordmark className="footer-wordmark" />
+      <div className="overflow-hidden border-t border-white/[0.08]" aria-hidden="true">
+        <Wordmark className="block w-full pt-[0.12em] text-center text-[clamp(7rem,23vw,21rem)] leading-[0.68] font-normal tracking-[-0.06em] text-white/[0.06] whitespace-nowrap [&_em]:text-rose/[0.18] max-sm:text-[clamp(6rem,31vw,12rem)]" />
       </div>
     </footer>
   )
